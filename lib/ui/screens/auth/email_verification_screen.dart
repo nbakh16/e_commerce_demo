@@ -1,5 +1,6 @@
 import 'package:e_commerce_demo/ui/utils/image_assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
@@ -42,12 +43,12 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                   TextFormField(
                     controller: emailTEController,
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.email_outlined),
+                      prefixIcon: const Icon(Icons.email_outlined),
                       suffixIcon: IconButton(
                         onPressed: (){
                           emailTEController.clear();
                         },
-                        icon: Icon(Icons.cancel)
+                        icon: const Icon(Icons.cancel)
                       ),
                       hintText: 'Email address',
                       labelText: 'Email',
@@ -60,10 +61,10 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                       onPressed: () {
 
                       },
-                      child: Text('Next')
+                      child: const Text('Next')
                     ),
                   )
-                ],
+                ].animate(interval: 200.ms).fadeIn().slideY(begin: 1),
               ),
             ),
           ),
