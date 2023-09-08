@@ -2,7 +2,10 @@ import 'dart:async';
 import 'package:get/get.dart';
 
 class OTPVerificationController extends GetxController {
-  RxInt countdown = 120.obs;
+  final RxInt _totalTimeInSecond = 120.obs;
+
+  RxInt get totalTimeInSecond => _totalTimeInSecond;
+
 
   @override
   void onInit() {
@@ -12,8 +15,8 @@ class OTPVerificationController extends GetxController {
 
   void startCountdown() {
     Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (countdown.value > 0) {
-        countdown.value--;
+      if (_totalTimeInSecond.value > 0) {
+        _totalTimeInSecond.value--;
       } else {
         timer.cancel();
       }

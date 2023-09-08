@@ -1,3 +1,4 @@
+import 'package:e_commerce_demo/ui/controllers/controller_binding.dart';
 import 'package:e_commerce_demo/ui/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -11,6 +12,7 @@ class ECommerceApp extends StatelessWidget {
       title: "E-Commerce",
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
+      initialBinding: ControllerBinding(),
       theme: ThemeData(
         inputDecorationTheme: const InputDecorationTheme(
           contentPadding: EdgeInsets.symmetric(horizontal: 14.0),
