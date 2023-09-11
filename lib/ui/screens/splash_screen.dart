@@ -1,30 +1,10 @@
 import 'package:e_commerce_demo/ui/utils/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
 
-import 'bottom_nav_base.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-
-  @override
-  void initState() {
-    super.initState();
-    navigateToNextPage();
-  }
-
-  void navigateToNextPage() {
-    Future.delayed(const Duration(seconds: 3)).then((value) async {
-      Get.offAll(const BottomNavBase(), transition: Transition.fadeIn);
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
