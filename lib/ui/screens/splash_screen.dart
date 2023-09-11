@@ -1,8 +1,9 @@
-import 'package:e_commerce_demo/ui/screens/home_screen.dart';
 import 'package:e_commerce_demo/ui/utils/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+
+import 'bottom_nav_base.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -21,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void navigateToNextPage() {
     Future.delayed(const Duration(seconds: 3)).then((value) async {
-      Get.offAll(const HomeScreen(), transition: Transition.fadeIn);
+      Get.offAll(const BottomNavBase(), transition: Transition.fadeIn);
     });
   }
 
