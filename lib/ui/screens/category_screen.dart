@@ -1,3 +1,4 @@
+import 'package:e_commerce_demo/ui/screens/widgets/category_card.dart';
 import 'package:flutter/material.dart';
 
 class CategoryScreen extends StatelessWidget {
@@ -5,8 +6,18 @@ class CategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Category'),
+    return Padding(
+      padding: const EdgeInsets.all(14.0),
+      child: GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 4,
+          mainAxisSpacing: 16,
+        ),
+        itemCount: 18,
+        itemBuilder: (context, index) {
+          return const CategoryCard();
+        }
+      ),
     );
   }
 }

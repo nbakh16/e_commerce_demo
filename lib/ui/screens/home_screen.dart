@@ -1,11 +1,8 @@
 import 'package:e_commerce_demo/ui/screens/widgets/category_card.dart';
-import 'package:e_commerce_demo/ui/screens/widgets/circular_icon_button.dart';
 import 'package:e_commerce_demo/ui/screens/widgets/home/home_slider.dart';
 import 'package:e_commerce_demo/ui/screens/widgets/home/section_header.dart';
 import 'package:e_commerce_demo/ui/screens/widgets/product_card.dart';
-import 'package:e_commerce_demo/ui/utils/image_assets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {

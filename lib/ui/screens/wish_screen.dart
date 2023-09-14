@@ -1,3 +1,4 @@
+import 'package:e_commerce_demo/ui/screens/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
 class WishScreen extends StatelessWidget {
@@ -5,8 +6,18 @@ class WishScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Wish'),
+    return Padding(
+      padding: const EdgeInsets.all(14.0),
+      child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            mainAxisSpacing: 10.0,
+          ),
+          itemCount: 18,
+          itemBuilder: (context, index) {
+            return const ProductCard();
+          }
+      ),
     );
   }
 }
