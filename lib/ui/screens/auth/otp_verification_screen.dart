@@ -1,3 +1,4 @@
+import 'package:e_commerce_demo/ui/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
@@ -57,7 +58,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                       fieldHeight: 50,
                       fieldWidth: 50,
                       activeFillColor: Colors.white,
-                      activeColor: Colors.green,
+                      activeColor: mainColor,
                       inactiveColor: Colors.grey,
                     ),
                     animationDuration: const Duration(milliseconds: 300),
@@ -83,7 +84,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                           const TextSpan(text: 'This code will expire in '),
                           TextSpan(text: '${otpVerificationController.totalTimeInSecond.value}s',
                             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                color: Colors.blue
+                                color: mainColor, fontWeight: FontWeight.w700
                             ),
                           )
                         ]

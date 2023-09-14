@@ -1,3 +1,4 @@
+import 'package:e_commerce_demo/ui/utils/colors.dart';
 import 'package:e_commerce_demo/ui/utils/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -48,7 +49,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                         onPressed: (){
                           emailTEController.clear();
                         },
-                        icon: const Icon(Icons.cancel)
+                        icon: Icon(Icons.cancel, color: mainColor.shade300,)
                       ),
                       hintText: 'Email address',
                       labelText: 'Email',

@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:e_commerce_demo/ui/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class HomeSlider extends StatefulWidget {
@@ -29,7 +30,7 @@ class _HomeSliderState extends State<HomeSlider> {
                 return Container(
                     width: MediaQuery.of(context).size.width,
                     margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                    decoration: const BoxDecoration(color: Colors.amber),
+                    decoration: const BoxDecoration(color: mainColor),
                     alignment: Alignment.center,
                     child: Text(
                       'text $i',
@@ -54,7 +55,7 @@ class _HomeSliderState extends State<HomeSlider> {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey),
                     borderRadius: BorderRadius.circular(10),
-                    color: value == i ? Colors.blueAccent : null),
+                    color: value == i ? mainColor : null),
               ));
             }
             return Row(

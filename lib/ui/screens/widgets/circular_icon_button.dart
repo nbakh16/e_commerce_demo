@@ -1,3 +1,4 @@
+import 'package:e_commerce_demo/ui/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CircularIconButton extends StatelessWidget {
@@ -17,10 +18,10 @@ class CircularIconButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(30),
       child: CircleAvatar(
         radius: 14,
-        backgroundColor: Colors.grey.shade200,
+        backgroundColor: textColor.withOpacity(0.12),
         child: Icon(
           icon,
-          color: Colors.grey,
+          color: textColor,
           size: 16,
         ),
       ),

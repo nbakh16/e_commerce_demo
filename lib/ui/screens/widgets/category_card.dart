@@ -1,3 +1,4 @@
+import 'package:e_commerce_demo/ui/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {
@@ -15,12 +16,12 @@ class CategoryCard extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 8),
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-                color: Colors.blueAccent.withOpacity(0.1),
+                color: mainColor.shade50,
                 borderRadius: BorderRadius.circular(8)),
             child: const Icon(
               Icons.shop,
               size: 32,
-              color: Colors.blueAccent,
+              color: mainColor,
             ),
           ),
           const SizedBox(
@@ -30,7 +31,6 @@ class CategoryCard extends StatelessWidget {
             'Electronics',
             style: TextStyle(
                 fontSize: 15,
-                color: Colors.blueAccent,
                 letterSpacing: 0.4),
           )
         ],

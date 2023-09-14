@@ -1,3 +1,4 @@
+import 'package:e_commerce_demo/ui/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -21,7 +22,7 @@ class ProductCard extends StatelessWidget {
               flex: 2,
               child: Container(
                 width: double.infinity,
-                color: Colors.brown,
+                color: mainColor.shade100,
                 padding: const EdgeInsets.all(6.0),
                 child: SvgPicture.asset(ImageAssets.logoSVG)
               )
