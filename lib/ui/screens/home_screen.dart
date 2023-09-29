@@ -1,9 +1,7 @@
-import 'package:e_commerce_demo/ui/screens/widgets/category_card.dart';
 import 'package:e_commerce_demo/ui/screens/widgets/home/home_slider.dart';
-import 'package:e_commerce_demo/ui/screens/widgets/home/section_header.dart';
-import 'package:e_commerce_demo/ui/screens/widgets/product_card.dart';
+import 'package:e_commerce_demo/ui/screens/widgets/home/product_section.dart';
+import 'package:e_commerce_demo/ui/screens/widgets/home/categories_section.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -31,38 +29,18 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16,),
               const HomeSlider(),
-              SectionHeader(
-                title: 'Categories',
-                onTap: () {},
+              const CategorySection(),
+              ProductSection(
+                sectionTitle: 'Popular',
+                onTap: () {}
               ),
-              const SizedBox(height: 8,),
-              SizedBox(
-                height: 100,
-                child: ListView.builder(
-                    itemCount: 8,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return const CategoryCard();
-                    }),
+              ProductSection(
+                  sectionTitle: 'Special',
+                  onTap: () {}
               ),
-              const SizedBox(height: 16,),
-              SectionHeader(
-                title: 'Popular',
-                onTap: () {},
-              ),
-              const SizedBox(height: 8,),
-              SizedBox(
-                height: Get.width * 0.40,
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 12,
-                  itemBuilder: (context, index) {
-                    return AspectRatio(
-                      aspectRatio: 1,
-                      child: ProductCard());
-                  },
-                )
+              ProductSection(
+                  sectionTitle: 'New',
+                  onTap: () {}
               ),
             ],
           ),

@@ -33,10 +33,15 @@ class ProductCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text('\$100'),
-                  Text('4.8'),
+                  Row(
+                    children: [
+                      Icon(Icons.star, color: mainColor.shade400,),
+                      Text('4.8'),
+                    ],
+                  ),
                   CircularIconButton(
                     onTap: (){},
-                    icon: Icons.ac_unit,
+                    icon: Icons.favorite_border,
                   )
                 ],
               )

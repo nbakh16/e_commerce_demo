@@ -13,16 +13,15 @@ class CircularIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(30),
       child: CircleAvatar(
         radius: 14,
-        backgroundColor: textColor.withOpacity(0.12),
+        backgroundColor: mainColor.shade400,
         child: Icon(
           icon,
-          color: textColor,
-          size: 16,
+          color: Colors.white,
+          size: 20,
         ),
       ),
     );
