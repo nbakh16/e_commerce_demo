@@ -12,7 +12,7 @@ class SplashController extends GetxController {
 
   void navigateToNextPage() {
     Future.delayed(const Duration(seconds: 3)).then((value) async {
-      Get.offAll(const BottomNavBase(), transition: Transition.fadeIn);
+      Get.offAll(()=> const BottomNavBase(), transition: Transition.fadeIn);
     });
   }
 
