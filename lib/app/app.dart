@@ -1,4 +1,4 @@
-import 'package:e_commerce_demo/ui/controllers/controller_binding.dart';
+import 'package:e_commerce_demo/app/controller_binding.dart';
 import 'package:e_commerce_demo/ui/screens/splash_screen.dart';
 import 'package:e_commerce_demo/ui/utils/colors.dart';
 import 'package:flutter/material.dart';

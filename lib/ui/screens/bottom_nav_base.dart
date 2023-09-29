@@ -2,14 +2,10 @@ import 'package:e_commerce_demo/ui/controllers/bottom_nav_controller.dart';
 import 'package:e_commerce_demo/ui/screens/cart_screen.dart';
 import 'package:e_commerce_demo/ui/screens/category_screen.dart';
 import 'package:e_commerce_demo/ui/screens/home_screen.dart';
-import 'package:e_commerce_demo/ui/screens/widgets/circular_icon_button.dart';
 import 'package:e_commerce_demo/ui/screens/wish_screen.dart';
 import 'package:e_commerce_demo/ui/utils/colors.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
-import '../utils/image_assets.dart';
 
 class BottomNavBase extends StatefulWidget {
   const BottomNavBase({super.key});
@@ -31,36 +27,6 @@ class _BottomNavBaseState extends State<BottomNavBase> {
     return GetBuilder<BottomNavController>(
       builder: (controller) {
         return Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.white,
-            elevation: 0,
-            title: Row(
-              children: [
-                SvgPicture.asset(
-                  ImageAssets.logoNavSVG,
-                ),
-                const Spacer(),
-                CircularIconButton(
-                  icon: Icons.person,
-                  onTap: () {},
-                ),
-                const SizedBox(
-                  width: 8,
-                ),
-                CircularIconButton(
-                  icon: Icons.call,
-                  onTap: () {},
-                ),
-                const SizedBox(
-                  width: 8,
-                ),
-                CircularIconButton(
-                  icon: Icons.notifications_none,
-                  onTap: () {},
-                ),
-              ],
-            ),
-          ),
           body: _screens[controller.currentSelectedIndex],
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: controller.currentSelectedIndex,

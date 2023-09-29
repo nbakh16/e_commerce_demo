@@ -2,7 +2,7 @@ import 'package:e_commerce_demo/ui/controllers/bottom_nav_controller.dart';
 import 'package:e_commerce_demo/ui/controllers/splash_controller.dart';
 import 'package:get/get.dart';
 
-import 'otp_verification_controller.dart';
+import '../ui/controllers/otp_verification_controller.dart';
 
 class ControllerBinding extends Bindings{
   @override
