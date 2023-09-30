@@ -39,11 +39,15 @@ class ProductCard extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text('\$100'),
+                    Text('\$100',
+                      style: Theme.of(context).textTheme.labelSmall,
+                    ),
                     Row(
                       children: [
                         Icon(Icons.star, color: mainColor.shade400,),
-                        Text('4.8'),
+                        Text('4.8',
+                          style: Theme.of(context).textTheme.labelSmall,
+                        ),
                       ],
                     ),
                     CircularIconButton(
