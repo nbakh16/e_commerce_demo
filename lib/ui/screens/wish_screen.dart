@@ -1,5 +1,5 @@
 import 'package:e_commerce_demo/ui/screens/widgets/custom_appbar.dart';
-import 'package:e_commerce_demo/ui/screens/widgets/product_card.dart';
+import 'package:e_commerce_demo/ui/screens/widgets/product/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

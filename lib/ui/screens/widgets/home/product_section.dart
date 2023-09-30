@@ -1,7 +1,7 @@
 import 'package:e_commerce_demo/ui/screens/widgets/home/section_header.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../product_card.dart';
+import '../product/product_card.dart';
 
 class ProductSection extends StatelessWidget {
   const ProductSection({super.key, required this.sectionTitle, required this.onTap});
