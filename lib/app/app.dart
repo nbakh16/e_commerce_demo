@@ -17,17 +17,26 @@ class ECommerceApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: mainColor,
         textTheme: const TextTheme(
-          bodyMedium: TextStyle(),
+          bodyMedium: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.normal,
+              letterSpacing: 0.5
+          ),
           titleMedium: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
             letterSpacing: 0.75
           ),
+          titleSmall: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            letterSpacing: 0.75,
+          ),
           labelSmall: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w500,
             letterSpacing: 0.5,
-          )
+          ),
         ).apply(
           bodyColor: textColor,
         ),
