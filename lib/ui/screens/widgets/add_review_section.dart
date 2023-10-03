@@ -1,4 +1,6 @@
+import 'package:e_commerce_demo/ui/screens/create_review_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../utils/colors.dart';
 
@@ -27,7 +29,7 @@ class AddReviewSection extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: (){
-
+              Get.to(()=> const CreateReviewScreen());
             },
             style: ElevatedButton.styleFrom(
               shape: const CircleBorder()

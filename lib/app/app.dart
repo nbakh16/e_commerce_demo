@@ -40,14 +40,17 @@ class ECommerceApp extends StatelessWidget {
         ).apply(
           bodyColor: textColor,
         ),
-        inputDecorationTheme: const InputDecorationTheme(
-          contentPadding: EdgeInsets.symmetric(horizontal: 14.0),
-          border: OutlineInputBorder(),
-          enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey)
+        inputDecorationTheme: InputDecorationTheme(
+          contentPadding: const EdgeInsets.symmetric(horizontal: 14.0),
+          border: const OutlineInputBorder(),
+          enabledBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+              color: mainColor,
+              width: 1.25
+            )
           ),
-          hintStyle: TextStyle(color: Colors.grey),
-          prefixIconColor: Colors.grey,
+          hintStyle: const TextStyle(color: Colors.grey, fontWeight: FontWeight.normal),
+          prefixIconColor: mainColor.shade300,
           suffixIconColor: Colors.grey,
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
