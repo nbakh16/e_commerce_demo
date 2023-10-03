@@ -1,4 +1,6 @@
+import 'package:e_commerce_demo/ui/screens/reviews_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../utils/colors.dart';
 import '../circular_icon_button.dart';
@@ -24,7 +26,7 @@ class ProductRatingAndReview extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: TextButton(
             onPressed: () {
-
+              Get.to(()=> const ReviewsScreen());
             },
             child: Text('Review',
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
