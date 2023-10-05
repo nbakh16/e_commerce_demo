@@ -16,7 +16,8 @@ class WishScreen extends StatelessWidget {
         return false;
       },
       child: Scaffold(
-        appBar: const CustomAppbar(title: 'Wishlist',),
+        appBar: CustomAppbar(title: 'Wishlist',
+            onTapBack: Get.find<BottomNavController>().backToHome),
         body: Padding(
           padding: const EdgeInsets.all(14.0),
           child: GridView.builder(

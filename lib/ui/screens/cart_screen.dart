@@ -15,7 +15,8 @@ class CartScreen extends StatelessWidget {
         return false;
       },
       child: Scaffold(
-        appBar: CustomAppbar(title: 'Cart'),
+        appBar: CustomAppbar(title: 'Cart',
+          onTapBack: Get.find<BottomNavController>().backToHome),
         body: Center(
           child: Text('Cart'),
         ),

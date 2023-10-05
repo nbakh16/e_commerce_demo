@@ -7,7 +7,7 @@ class CreateReviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppbar(title: 'Create Review',),
+      appBar: CustomAppbar(title: 'Create Review',),
       body: Form(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 60.0),

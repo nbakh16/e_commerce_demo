@@ -16,7 +16,10 @@ class CategoryScreen extends StatelessWidget {
         return false;
       },
       child: Scaffold(
-        appBar: const CustomAppbar(title: 'Categories',),
+        appBar: CustomAppbar(
+          title: 'Categories',
+          onTapBack: Get.find<BottomNavController>().backToHome
+        ),
         body: Padding(
           padding: const EdgeInsets.all(14.0),
           child: GridView.builder(

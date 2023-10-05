@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../controllers/bottom_nav_controller.dart';
-
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget{
-  const CustomAppbar({super.key, required this.title});
+  // CustomAppbar({super.key, required this.title, this.onTapBack});
+
+  CustomAppbar({Key? key, required this.title, void Function()? onTapBack})
+      : onTapBack = onTapBack ?? Get.back,
+        super(key: key);
 
   final String title;
+  final void Function()? onTapBack;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +17,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget{
       title: Text(title),
       elevation: 2,
       leading: IconButton(
-        onPressed: Get.find<BottomNavController>().backToHome,
+        onPressed: onTapBack,
         icon: const Icon(Icons.arrow_back),
       ),
     );
