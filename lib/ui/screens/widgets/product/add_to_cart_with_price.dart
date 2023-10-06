@@ -5,7 +5,13 @@ import '../../../utils/colors.dart';
 class AddToCartWithPrice extends StatelessWidget {
   const AddToCartWithPrice({
     super.key,
+    this.buttonText = 'Add to Cart',
+    this.priceText = '1699',
+    this.onTap,
   });
+
+  final String buttonText, priceText;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +35,7 @@ class AddToCartWithPrice extends StatelessWidget {
                 Text('Price',
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
-                Text('\$ 1,699',
+                Text('\$ $priceText',
                   style: Theme.of(context).textTheme.titleSmall?.copyWith(
                     color: mainColor.shade900
                   ),
@@ -40,10 +46,8 @@ class AddToCartWithPrice extends StatelessWidget {
           Expanded(
             flex: 2,
             child: ElevatedButton(
-              onPressed: (){
-
-              },
-              child: const Text('Add to Cart')
+              onPressed: onTap,
+              child: Text(buttonText)
             ),
           )
         ],

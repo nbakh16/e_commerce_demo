@@ -1,4 +1,6 @@
+import 'package:e_commerce_demo/ui/screens/widgets/cart/cart_product_card.dart';
 import 'package:e_commerce_demo/ui/screens/widgets/custom_appbar.dart';
+import 'package:e_commerce_demo/ui/screens/widgets/product/add_to_cart_with_price.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,9 +19,25 @@ class CartScreen extends StatelessWidget {
       child: Scaffold(
         appBar: CustomAppbar(title: 'Cart',
           onTapBack: Get.find<BottomNavController>().backToHome),
-        body: Center(
-          child: Text('Cart'),
-        ),
+        body: Column(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListView.builder(
+                  itemCount: 4,
+                  itemBuilder: (context, index) {
+                    return CartProductCard();
+                  },
+                ),
+              ),
+            ),
+            AddToCartWithPrice(
+              onTap: () {},
+              buttonText: 'Checkout',
+            )
+          ],
+        )
       ),
     );
   }
